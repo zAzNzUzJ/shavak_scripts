@@ -23,8 +23,7 @@ error()   { echo -e "${RED}[ERROR]${NC} $*"; exit 1; }
 KERNEL_VER=$(uname -r)
 info "Downloading kernel packages for: ${KERNEL_VER}"
 
-dnf install -y --downloadonly --downloaddir="${HOME}/Downloads" \
-    "kernel*${KERNEL_VER}" 2>/dev/null || \
+dnf install -y   kernel*${KERNEL_VER}
 warn "Some kernel packages may already be installed or unavailable — continuing."
 
 info "Kernel packages saved to ${HOME}/Downloads/"
