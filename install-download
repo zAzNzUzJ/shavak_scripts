@@ -20,13 +20,10 @@ error()   { echo -e "${RED}[ERROR]${NC} $*"; exit 1; }
 # =============================================================================
 # 1. Download kernel packages matching the running kernel
 # =============================================================================
-KERNEL_VER=$(uname -r)
-info "Downloading kernel packages for: ${KERNEL_VER}"
 
-dnf install -y   kernel*${KERNEL_VER}
-warn "Some kernel packages may already be installed or unavailable — continuing."
 
-info "Kernel packages saved to ${HOME}/Downloads/"
+dnf install -y   kernel*$(uname -r)
+
 
 # =============================================================================
 # 2. Download NVIDIA driver
