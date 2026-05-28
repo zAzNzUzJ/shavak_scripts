@@ -22,8 +22,6 @@ error()   { echo -e "${RED}[ERROR]${NC} $*"; exit 1; }
 # =============================================================================
 
 
-dnf install -y   kernel*$(uname -r)
-
 
 # =============================================================================
 # 2. Download NVIDIA driver
@@ -94,6 +92,12 @@ else
         "${INSTALLER_DIR}"
     info "shavak_hpc_installer cloned successfully."
 fi
+
+
+
+dnf install -y   kernel*$(uname -r) 
+
+
 
 # =============================================================================
 # Summary
