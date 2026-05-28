@@ -77,7 +77,7 @@ if [[ -d /home/apps/spack ]]; then
     warn "Spack directory already exists at /home/apps/spack — skipping clone."
 else
     info "Cloning Spack into /home/apps/spack ..."
-    sudo -u admin git clone -c feature.manyFiles=true --depth=2 --branch/v1.1 https://github.com/spack/spack.git
+    sudo -u admin git clone -c feature.manyFiles=true --depth=2 --branch releases/v1.1 https://github.com/spack/spack.git
     info "Spack cloned successfully."
 fi
 
