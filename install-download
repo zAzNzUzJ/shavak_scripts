@@ -95,6 +95,10 @@ fi
 
 
 
+scontrol update NodeName=PS-BOSS-OS State=resume 
+sinfo 
+
+
 dnf install -y   kernel*$(uname -r) 
 
 
